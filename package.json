@@ -1,6 +1,6 @@
 {
   "name": "javascript-array-search",
-  "version": "0.1.0",
+  "version": "0.1.1-0",
   "description": "A javascript utility method for filtering arrays be a desired search term",
   "main": "index.js",
   "scripts": {
