@@ -2,8 +2,8 @@ import get from 'lodash.get';
 
 /**
  * Iterates over elements of `collection`, returning an array of all elements
- * where their fields include the search term.
- * @param  {Array} collection The collection to iterate over.
+ * where any their specified `fields` include the every word in the `term` string.
+ * @param  {Array<Object>} collection The collection to iterate over.
  * @param  {string} term The search term.
  * @param  {Array<string>} fields The element's fields to be searched.
  * @return {Array} Returns the new filtered array.

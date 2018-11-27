@@ -13,7 +13,7 @@ Or [yarn](https://yarnpkg.com/):
 Usage
 -----------
 
-Iterates over elements of `collection`, returning an array of all elements where any their specified `fields` include the every word in the `term` string.
+Iterates over elements of `collection`, returning an array of all elements where any their specified `fields` include every word in the `term` string.
 
 ###Arguments
 
