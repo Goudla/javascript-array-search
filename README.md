@@ -15,7 +15,7 @@ Usage
 
 Iterates over elements of `collection`, returning an array of all elements where any their specified `fields` include every word in the `term` string.
 
-###Arguments
+### Arguments
 
 | parameter   | type    | description                          |
 | ---------   | ------- | ------------------------------------ |
@@ -23,11 +23,11 @@ Iterates over elements of `collection`, returning an array of all elements where
 | `term`      | string  | The search term                      |
 | `fields`    | Array   | The element's fields to be searched. |
 
-###Returns
+### Returns
 
 `Array`Returns the new filtered array.
 
-###Example
+### Example
 ```js
 const users = [
   { 'user': 'Barney Rubble',      'age': 36 },
