@@ -9,7 +9,7 @@ Using [npm](https://www.npmjs.com/):
 Or [yarn](https://yarnpkg.com/):
 
     $ yarn add javascript-array-search
-    
+
 Usage
 -----------
 
@@ -34,16 +34,16 @@ const users = [
   { 'user': 'Fred Flintstone',    'age': 40 },
   { 'user': 'Pebbles Flintstone', 'age': 1 }
 ];
- 
+
 search(users, 'Fred Flint', ['user']);
 // => objects for ['Fred Flintstone']
- 
+
 search(users, 'Flintstone', ['user'])
 // => objects for ['Fred Flintston', 'Pebbles Flintstone']
- 
-search(users, '4', ['age']);
+
+search(users, '3', ['age']);
 // => objects for ['Barney Rubble']
- 
-search(users, 'Flintstone 1', ['user', 'age]);
+
+search(users, 'Flintstone 1', ['user', 'age']);
 // => objects for ['Pebbles Flintstone']
 ```
