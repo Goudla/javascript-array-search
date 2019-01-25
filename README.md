@@ -1,4 +1,4 @@
-# Javascript Array Search
+# Search
 
 Installation
 -----------
