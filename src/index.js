@@ -1,4 +1,15 @@
-import get from 'lodash.get';
+function get(object, path) {
+  var pathArray = path.split('.');
+  if (!pathArray.length) {
+    return;
+  }
+  if (pathArray.length === 1) {
+    return object[pathArray[0]];
+  }
+  return pathArray.reduce(function(acc, cur) {
+    return acc[cur];
+  }, object);
+}
 
 /**
  * Iterates over elements of `collection`, returning an array of all elements
@@ -13,13 +24,15 @@ function search(collection, term, fields) {
     return [];
   }
   // The problem with this is it assumes all objects have the same keys
-  const fieldsToSearch = fields ? fields : Object.keys(collection[0]);
+  var fieldsToSearch = fields ? fields : Object.keys(collection[0]);
 
   if (!term) return collection;
-  const terms = term.split(' ');
-  return collection.filter((value) => {
-    const values = fieldsToSearch.map(field => get(value, field)).join().toLowerCase();
-    return terms.reduce((accumulator, searchTerm) => {
+  var terms = term.split(' ');
+  return collection.filter(function(value) {
+    var values = fieldsToSearch.map(function(field) {
+      return get(value, field);
+    }).join().toLowerCase();
+    return terms.reduce(function(accumulator, searchTerm) {
       if (!accumulator) return false;
       return values.indexOf(searchTerm.toLowerCase()) >= 0;
     }, true);
