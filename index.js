@@ -7,6 +7,12 @@
     this[name] = definition();
   }
 }('javascript-array-search', function() {
+  /**
+   * Gets the value at path of object. If the resolved value is undefined.
+   * @param  {Object} object The object to query.
+   * @param  {string} path The path of the property to get.
+   * @return {string} Returns the resolved value.
+   */
   function get(object, path) {
     var pathArray = path.split('.');
     if (!pathArray.length) {
