@@ -34,7 +34,7 @@
    * @param  {Array<string>} [fields] The element's fields to be searched.
    * @return {Array} Returns the new filtered array.
    */
-  return function search(collection, term, fields) {
+  return function(collection, term, fields) {
     if (!collection || !collection.length) {
       return [];
     }
